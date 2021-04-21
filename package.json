@@ -11,7 +11,7 @@
     "analyze": "yarn build && source-map-explorer 'build/static/js/*.js'",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "check-types": "tsc",
-    "prettier": "prettier --ignore-path .gitignore \"src/**/*.+(js|jsx|json|ts|tsx)\"",
+    "prettier": "prettier --ignore-path .gitignore \"./src/**/*.+(js|jsx|json|ts|tsx)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
     "validate": "npm-run-all --parallel check-types check-format lint build",
