@@ -8,13 +8,14 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "analyze": "yarn build && source-map-explorer 'build/static/js/*.js'",
     "lint": "eslint --ignore-path .gitignore --ext .js,.ts,.tsx .",
     "check-types": "tsc",
     "prettier": "prettier --ignore-path .gitignore \"./src/**/*.+(js|jsx|json|ts|tsx)\"",
     "format": "yarn prettier --write",
     "check-format": "yarn prettier --list-different",
     "validate": "npm-run-all --parallel check-types check-format lint build",
+    "analyze": "yarn validate && source-map-explorer 'build/static/js/*.js'",
+    "colorized-analyze": "node ./bundle-analyze.js",
     "prepare": "husky install",
     "pre-commit-lint": "yarn check-types && yarn lint-staged"
   },
@@ -58,6 +59,8 @@
     "husky": "^6.0.0",
     "lint-staged": "^10.5.4",
     "npm-run-all": "^4.1.5",
-    "prettier": "^2.2.1"
+    "prettier": "^2.2.1",
+    "progress-bar-webpack-plugin": "^2.1.0",
+    "webpack-bundle-analyzer": "^4.4.1"
   }
 }
