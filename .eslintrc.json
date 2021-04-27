@@ -48,7 +48,9 @@
         "eslint-config-prettier"
       ],
       "rules": {
-        "@typescript-eslint/semi": "warn"
+        "@typescript-eslint/semi": "warn",
+        "@typescript-eslint/explicit-function-return-type": "off",
+        "@typescript-eslint/explicit-module-boundary-types": "off"
       }
     }
   ],
