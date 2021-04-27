@@ -1,0 +1,53 @@
+.row {
+  @include flex(null, center);
+  flex-wrap: wrap;
+
+  .column {
+    flex-grow: 1;
+
+    &[class*='desktop-'],
+    &[class*='tablet-'],
+    &[class*='mobile-'] {
+      flex-grow: 0;
+    }
+  }
+}
+
+$column_width: (0, 20, 25, 33.33, 50, 66.66, 75, 80, 100);
+// desktop (default)
+.column {
+  @each $item in $column_width {
+    &.desktop-#{floor($item)} {
+      width: #{$item + '%'};
+    }
+  }
+}
+
+// tablet
+@include mQ($md, $lg) {
+  .column {
+    @each $item in $column_width {
+      &.tablet-#{floor($item)} {
+        width: #{$item + '%'};
+      }
+    }
+  }
+}
+
+// mobile (portrait & landscape)
+@include mQ($xs, $md) {
+  .column {
+    width: 100%;
+
+    &[class*='desktop-'],
+    &[class*='tablet-'] {
+      width: 100%;
+    }
+
+    @each $item in $column_width {
+      &.mobile-#{floor($item)} {
+        width: #{$item + '%'};
+      }
+    }
+  }
+}

@@ -48,13 +48,6 @@
         "eslint-config-prettier"
       ],
       "rules": {
-        "@typescript-eslint/naming-convention": [
-          "warn",
-          {
-            "selector": "variable",
-            "format": ["camelCase"]
-          }
-        ],
         "@typescript-eslint/semi": "warn"
       }
     }

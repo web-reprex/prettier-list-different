@@ -1,0 +1,7 @@
+body {
+  &.rtl {
+    text-align: right;
+    direction: rtl;
+    font-family: $font-family-fa;
+  }
+}

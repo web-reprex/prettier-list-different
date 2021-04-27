@@ -1,0 +1,125 @@
+@mixin box($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin position(
+  $position: absolute,
+  $top: null,
+  $right: null,
+  $bottom: null,
+  $left: null
+) {
+  position: $position;
+  @if $top != null {
+    top: $top;
+  }
+  @if $right != null {
+    top: $right;
+  }
+  @if $bottom != null {
+    top: $bottom;
+  }
+  @if $left != null {
+    top: $left;
+  }
+}
+
+@mixin transition($properties...) {
+  $transitions: '';
+  @if $properties != null {
+    @each $property in $properties {
+      $transitions: #{$transitions}, #{$property} 0.25s;
+    }
+  }
+  transition: $transitions;
+}
+
+@mixin flex($direction: null, $justify: null, $align: null) {
+  display: flex;
+  @if $direction != null {
+    flex-direction: $direction;
+  }
+  @if $justify != null {
+    justify-content: $justify;
+  }
+  @if $align != null {
+    align-items: $align;
+  }
+}
+
+@mixin inline-flex($direction: null, $justify: null, $align: null) {
+  display: inline-flex;
+  @if $direction != null {
+    flex-direction: $direction;
+  }
+  @if $justify != null {
+    justify-content: $justify;
+  }
+  @if $align != null {
+    align-items: $align;
+  }
+}
+
+@mixin colorize($type: bg, $color: white, $alpha: 1) {
+  @if $type==bg {
+    background-color: rgba($color, $alpha);
+  } @else {
+    color: rgba($color, $alpha);
+  }
+}
+
+@mixin placeholder($color) {
+  &::placeholder {
+    color: $color;
+    opacity: 1;
+  }
+}
+
+@mixin truncate() {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin mQ($value1: $xs, $value2: null) {
+  @if $value2==null {
+    @media screen and (max-width: $value1 - 0.02) {
+      @content;
+    }
+  } @else {
+    @media screen and (min-width: $value1) and (max-width: $value2 - 0.02) {
+      @content;
+    }
+  }
+}
+
+@mixin button($name, $hex) {
+  &:not(.outline) {
+    background: var(--#{$name});
+    @if $name == light {
+      color: var(--dark);
+    } @else {
+      color: var(--light);
+    }
+    border-color: var(--#{$name});
+    box-shadow: 0 0 10px 0 rgba(var(--#{$name}-rgb), 0.4);
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: darken($hex, 5%);
+    }
+  }
+  &.outline {
+    background: rgba(var(--#{$name}-rgb), 0.1);
+    color: inherit;
+    border-color: var(--#{$name});
+
+    &:hover,
+    &:focus,
+    &:active {
+      background: rgba(var(--#{$name}-rgb), 0.2);
+    }
+  }
+}

@@ -1,0 +1,18 @@
+@font-face {
+  font-family: iransans;
+  font-style: normal;
+  font-weight: 300;
+  src: url('iransansweblightfanum.woff') format('woff');
+}
+@font-face {
+  font-family: iransans;
+  font-style: normal;
+  font-weight: normal;
+  src: url('iransanswebregularfanum.woff') format('woff');
+}
+@font-face {
+  font-family: iransans;
+  font-style: normal;
+  font-weight: bold;
+  src: url('iransanswebboldfanum.woff') format('woff');
+}

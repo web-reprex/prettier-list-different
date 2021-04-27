@@ -1,0 +1,54 @@
+// enums
+$z-indexes: (
+  sidebar: 30
+);
+
+$gradients: (
+  tag: linear-gradient(to top right, #4596fb, #57f2cc)
+);
+
+$shadows: (
+  box: 0 0 12px -6px rgba(var(--black-rgb), 0.2)
+);
+
+// space
+$margin: 20px;
+$padding: 10px;
+$hr-height: 1px;
+
+// radius
+$radius-lg: 20px;
+$radius-md: 10px;
+$radius-sm: 5px;
+
+// button
+$button-sm: 30px;
+$button-md: 40px;
+$button-lg: 50px;
+$button-disabled: #dee2e6;
+
+// input
+$input-sm: 30px;
+$input-md: 40px;
+$input-lg: 50px;
+
+// textarea
+$textarea-sm: 80px;
+$textarea-md: 100px;
+$textarea-lg: 120px;
+
+// switch
+$switch-size: 22px;
+$switch-gutter: 1px;
+
+// checkbox
+$checkbox-size: 20px;
+
+// radio
+$radio-size: 20px;
+
+// input
+$input-height: 38px;
+
+// dropdown
+$dropdown-width: 150px;

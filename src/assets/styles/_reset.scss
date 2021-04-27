@@ -1,0 +1,90 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%; // makes default '1rem' equal to `10px`
+}
+
+body {
+  font-family: $font-family-en;
+  font-size: $font-size-md;
+  line-height: $line-height-md;
+  font-weight: $font-weight-regular;
+  background: var(--main-bg);
+  color: var(--main-text);
+  @include transition(background, color);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  font-weight: normal;
+}
+
+@each $element, $size in $heading {
+  #{$element} {
+    font-size: $size;
+  }
+}
+
+hr {
+  border: 0;
+  margin: 0;
+  border-top: $hr-height solid var(--secondary);
+}
+
+table {
+  width: 100%;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  outline: none;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+img {
+  max-width: 100%;
+}
+
+button {
+  text-decoration: none;
+  user-select: none;
+  outline: none;
+  cursor: pointer;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-text);
+}
+
+label {
+  @include inline-flex;
+  cursor: inherit;
+}
+
+fieldset {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}

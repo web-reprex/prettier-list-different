@@ -1,0 +1,153 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url('icomoon.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^='icon-'],
+[class*=' icon-'] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: 'icomoon' !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-left:before {
+  content: '\e900';
+}
+.icon-up:before {
+  content: '\e901';
+}
+.icon-down:before {
+  content: '\e902';
+}
+.icon-right:before {
+  content: '\e903';
+}
+.icon-check:before {
+  content: '\e904';
+}
+.icon-close:before {
+  content: '\e905';
+}
+.icon-success:before {
+  content: '\e906';
+}
+.icon-cancel:before {
+  content: '\e907';
+}
+.icon-warning:before {
+  content: '\e908';
+}
+.icon-question:before {
+  content: '\e909';
+}
+.icon-clock:before {
+  content: '\e90a';
+}
+.icon-search:before {
+  content: '\e90b';
+}
+.icon-calendar:before {
+  content: '\e90c';
+}
+.icon-hide:before {
+  content: '\e90d';
+}
+.icon-show:before {
+  content: '\e90e';
+}
+.icon-edit:before {
+  content: '\e90f';
+}
+.icon-trash:before {
+  content: '\e910';
+}
+.icon-moon:before {
+  content: '\e911';
+}
+.icon-sun:before {
+  content: '\e912';
+}
+.icon-email:before {
+  content: '\e913';
+}
+.icon-attachment:before {
+  content: '\e914';
+}
+.icon-file:before {
+  content: '\e915';
+}
+.icon-folder:before {
+  content: '\e916';
+}
+.icon-copy:before {
+  content: '\e917';
+}
+.icon-filter:before {
+  content: '\e918';
+}
+.icon-heart:before {
+  content: '\e919';
+}
+.icon-link:before {
+  content: '\e91a';
+}
+.icon-logout:before {
+  content: '\e91b';
+}
+.icon-menu:before {
+  content: '\e91c';
+}
+.icon-mobile:before {
+  content: '\e91d';
+}
+.icon-notification:before {
+  content: '\e91e';
+}
+.icon-pin:before {
+  content: '\e91f';
+}
+.icon-refresh:before {
+  content: '\e920';
+}
+.icon-server:before {
+  content: '\e921';
+}
+.icon-settings:before {
+  content: '\e922';
+}
+.icon-star:before {
+  content: '\e923';
+}
+.icon-stats:before {
+  content: '\e924';
+}
+.icon-unlock:before {
+  content: '\e925';
+}
+.icon-lock:before {
+  content: '\e926';
+}
+.icon-user:before {
+  content: '\e927';
+}
+.icon-group:before {
+  content: '\e928';
+}
+.icon-upload:before {
+  content: '\e929';
+}
+.icon-download:before {
+  content: '\e92a';
+}

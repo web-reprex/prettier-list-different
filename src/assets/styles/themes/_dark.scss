@@ -1,0 +1,5 @@
+[theme='dark'] {
+  @each $name, $value in $dark-palette {
+    --#{$name}: #{$value};
+  }
+}

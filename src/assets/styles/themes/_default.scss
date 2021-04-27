@@ -1,0 +1,25 @@
+:root {
+  --_______________Colors_______________--: ;
+  @each $name, $value in $base-palette {
+    --#{$name}: #{$value};
+  }
+  --white: #{$white};
+  --black: #{$black};
+
+  --_______________Colors-RGB_______________--: ;
+  @each $name, $value in $base-palette-rgb {
+    --#{$name}-rgb: #{$value};
+  }
+  --white-rgb: #{$white-rgb};
+  --black-rgb: #{$black-rgb};
+
+  --_______________Breakpoints_______________--: ;
+  @each $name, $value in $breakpoints {
+    --media-query-#{$name}: #{$value};
+  }
+
+  --_______________App_______________--: ;
+  @each $name, $value in $default-palette {
+    --#{$name}: #{$value};
+  }
+}

@@ -1,0 +1,62 @@
+// base colors
+$primary: #3e64ff;
+$secondary: #9fa8b2;
+$light: #f1f4ff;
+$dark: #182039;
+$success: #44cf6c;
+$danger: #ff1f4c;
+$warning: #ffc107;
+$info: #26c6da;
+$primary-rgb: 62, 100, 255;
+$secondary-rgb: 159, 168, 178;
+$light-rgb: 241, 244, 255;
+$dark-rgb: 24, 32, 57;
+$success-rgb: 68, 207, 108;
+$danger-rgb: 255, 31, 76;
+$warning-rgb: 255, 193, 7;
+$info-rgb: 38, 198, 218;
+// black & white
+$black: #000000;
+$white: #ffffff;
+$black-rgb: 0, 0, 0;
+$white-rgb: 255, 255, 255;
+
+$base-palette: (
+  'primary': $primary,
+  'secondary': $secondary,
+  'light': $light,
+  'dark': $dark,
+  'success': $success,
+  'danger': $danger,
+  'warning': $warning,
+  'info': $info
+);
+
+$base-palette-rgb: (
+  'primary': $primary-rgb,
+  'secondary': $secondary-rgb,
+  'light': $light-rgb,
+  'dark': $dark-rgb,
+  'success': $success-rgb,
+  'danger': $danger-rgb,
+  'warning': $warning-rgb,
+  'info': $info-rgb
+);
+
+// theme colors
+$default-mode-bg: $light;
+$default-mode-box: $white;
+$dark-mode-bg: $dark;
+$dark-mode-box: #1e2745;
+
+$default-palette: (
+  'main-bg': $default-mode-bg,
+  'main-text': $dark,
+  'box-bg': $default-mode-box
+);
+
+$dark-palette: (
+  'main-bg': $dark-mode-bg,
+  'main-text': $light,
+  'box-bg': $dark-mode-box
+);
