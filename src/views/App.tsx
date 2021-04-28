@@ -1,10 +1,11 @@
 import AppRouter from '../router/router';
-import { ThemeLoader } from './components/theme/ThemeLoader';
+import { ThemeProvider } from '../contexts/theme/ThemeProvider';
+// import { ThemeLoader as ThemeProvider } from './components/theme/ThemeLoader';
 
 const App = () => (
-  <ThemeLoader>
+  <ThemeProvider>
     <AppRouter />
-  </ThemeLoader>
+  </ThemeProvider>
 );
 
 export default App;
