@@ -9,10 +9,11 @@ export const saveThem = (nextTheme: Themes) =>
 export const getSavedTheme = () =>
   (localStorage.getItem('theme') as Themes) || Themes.light;
 
-export const setThemeAttribute = (nextTheme: Themes) =>
-  document.documentElement.setAttribute('theme', nextTheme);
 export const getNextTheme = (theme: Themes) =>
   theme === Themes.light ? Themes.dark : Themes.light;
+
+export const setThemeAttribute = (nextTheme: Themes) =>
+  document.documentElement.setAttribute('theme', nextTheme);
 
 export const ThemeContext = createContext<Themes | undefined>(undefined);
 export const ThemeContextSetState = createContext<CallableFunction | undefined>(
@@ -27,14 +28,8 @@ export const ThemeProvider = ({ children }: { children: JSX.Element }) => {
     saveThem(nextTheme);
   };
 
-  useEffect(() => {
-    // Load theme
-    setThemeAttribute(getSavedTheme());
-  }, []);
-  useEffect(() => {
-    // update theme
-    setThemeAttribute(theme);
-  }, [theme]);
+  useEffect(() => setThemeAttribute(theme), [theme]);
+
   return (
     <ThemeContext.Provider value={theme}>
       <ThemeContextSetState.Provider value={changeThemeHandler}>
